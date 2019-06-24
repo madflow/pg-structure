@@ -12,6 +12,7 @@ matrix:
       addons:
         postgresql: "10"
     - name: Postgresql 11
+      env:
         - INSTALL_11=true
       addons:
         postgresql: "11"
