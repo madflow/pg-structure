@@ -1,9 +1,6 @@
 language: node_js
-
+dist: xenial
 sudo: required
-
-services:
-  - postgresql
 
 matrix:
   include:
@@ -15,7 +12,7 @@ node_js:
   - "10"
 
 before_script:
-  - psql -c 'create database okay_test' -U postgres
+- psql -c 'create database travis;' -U postgres
 
 script:
   - npm test
