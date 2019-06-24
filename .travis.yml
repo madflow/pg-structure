@@ -1,29 +1,18 @@
 language: node_js
 
+sudo: required
+
 services:
   - postgresql
 
 matrix:
   include:
-    - addons:
-      postgresql: "9.6"
-    - addons:
-      postgresql: "10"
-    - addons:
-      postgresql: "11"
+    - name: Postgresql 10
+      addons:
+        postgresql: "10"
 
 node_js:
   - "10"
-
-env:
-  global:
-    - PGPORT=5433
-    - PGUSER=postgres
-    - PGPASSWORD=postgres
-
-before_install:
-  - sudo cp /etc/postgresql/{9.6,10,11}/main/pg_hba.conf
-  - sudo /etc/init.d/postgresql restart
 
 before_script:
   - psql -c 'create database okay_test' -U postgres
