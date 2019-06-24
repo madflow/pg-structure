@@ -31,7 +31,6 @@ before_script:
   - | 
     if [[ "$INSTALL_11" == "true" ]]; then
       psql --version
-      cp config/database.yml.travis config/database.yml
     fi 
 
 env:
