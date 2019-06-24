@@ -5,19 +5,24 @@ sudo: required
 matrix:
   include:
     - name: Postgresql 9.6
+      env:
+        - PGPORT=5432
       addons:
         postgresql: "9.6"
     - name: Postgresql 10
+      env:
+        - PGPORT=5432
       addons:
         postgresql: "10"
     - name: Postgresql 11
+      env:
+        - PGPORT=5433
       addons:
         postgresql: "11"
 
 
 env:
   global:
-    - PGPORT=5432
     - PGUSER=postgres
     - PGPASSWORD=postgres
 
