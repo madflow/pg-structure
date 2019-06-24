@@ -22,7 +22,7 @@ var createDB = function createDB(code) {
         .createDatabase({ name: dbName, drop: true })
         .then(db => db.queryFile(path.join(__dirname, `create-test-db-${code}.sql`)))
         .catch(err => {
-            console.log(err);
+            console.error(err);
         });
 };
 

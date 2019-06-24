@@ -8,11 +8,14 @@ matrix:
       addons:
         postgresql: "10"
 
+env:
+  global:
+    - PGPORT=5432
+    - PGUSER=postgres
+    - PGPASSWORD=postgres
+
 node_js:
   - "10"
-
-before_script:
-- psql -c 'create database travis_tester;' -U postgres
 
 script:
   - npm test
