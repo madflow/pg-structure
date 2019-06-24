@@ -4,9 +4,16 @@ sudo: required
 
 matrix:
   include:
+    - name: Postgresql 9.6
+      addons:
+        postgresql: "9.6"
     - name: Postgresql 10
       addons:
         postgresql: "10"
+    - name: Postgresql 11
+      addons:
+        postgresql: "11"
+
 
 env:
   global:
