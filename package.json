@@ -51,10 +51,10 @@
     "semver": "^5.6.0"
   },
   "devDependencies": {
+    "@hapi/lab": "^19.1.0",
     "chai": "^4.2.0",
-    "js-yaml": "^3.12.1",
+    "js-yaml": "^3.13.1",
     "jsdoc-to-markdown": "^4.0.1",
-    "lab": "^18.0.2",
     "pg-test-util": "^2.0.4"
   }
 }

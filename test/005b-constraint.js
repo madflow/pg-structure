@@ -1,9 +1,9 @@
 "use strict";
-var Lab = require("lab");
+const Lab = require('@hapi/lab');
 var Chai = require("chai");
 var pgStructure = require("../index");
 
-var lab = (exports.lab = Lab.script());
+const lab = exports.lab = Lab.script();
 var describe = lab.describe;
 var it = lab.it;
 var testDB = require("./util/test-db.js");
